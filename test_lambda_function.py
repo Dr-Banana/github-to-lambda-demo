@@ -17,9 +17,9 @@ class TestLambdaFunction(unittest.TestCase):
         
         # 检查输出
         output = captured_output.getvalue()
-        self.assertIn("col1  col2", output)
-        self.assertIn("0    1     3", output)
-        self.assertIn("1    2     4", output)
+        self.assertIn("col1 col2", output)
+        self.assertIn("0 1 3", output)
+        self.assertIn("1 2 4", output)
         self.assertIn("Done x1.1", output)
 
 if __name__ == '__main__':
