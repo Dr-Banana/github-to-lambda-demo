@@ -5,13 +5,15 @@ phases:
       python: 3.10
     commands:
       - echo "Installing dependencies..."
-      - pip install -r requirements.txt -t lib
+      - pip install -r requirements.txt
   build:
     commands:
       - echo "Running unit tests..."
       - python -m unittest test_lambda_function.py
       - echo "Zipping deployment package..."
-      - cd lib
+      - mkdir package
+      - pip install -r requirements.txt -t package
+      - cd package
       - zip -r9 ../deployment_package.zip .
       - cd ..
       - zip -g deployment_package.zip lambda_function.py
