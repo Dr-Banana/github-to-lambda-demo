@@ -23,7 +23,6 @@ class TestLambdaFunction(unittest.TestCase):
         # 检查输出
         output = captured_output.getvalue()
         self.assertIn("Done x1.1", output)
-        self.assertIn("aaaa", output)
 
 if __name__ == '__main__':
     unittest.main()

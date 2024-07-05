@@ -13,4 +13,4 @@ def lambda_handler(event, context):
     else:
         input_data = {"a": "default", "b": "default", "c": "default"}
 
-    print(input_data.get('a', 'a not found'))
+    return input_data.get('a', 'a not found')
