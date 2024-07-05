@@ -2,9 +2,6 @@ import pandas as pd
 import json
 
 def lambda_handler(event, context):
-    d = {'col1': [1,2], 'col2': [3,4]}
-    df = pd.DataFrame(data=d)
-    print(df)
     print('Done x1.1')
     if event and isinstance(event, dict):
         input_data = event
@@ -13,4 +10,4 @@ def lambda_handler(event, context):
     else:
         input_data = {"a": "default", "b": "default", "c": "default"}
 
-    return input_data.get('a', 'a not found')
+    return input_data.get("a", 'a not found')
